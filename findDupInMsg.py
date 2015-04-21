@@ -3,7 +3,9 @@ __author__ = 'JeredYang'
 def find_secret_message(paragraph):
     #your code here
     paragraph = paragraph.translate(None, "?.!/;:")
+    print paragraph
     cha_list = paragraph.lower().split(" ")
+    print cha_list
     a_dict = {}
     a_list = []
     result = ""
@@ -13,7 +15,7 @@ def find_secret_message(paragraph):
         if cha_list[index] in dup:
             a_list.append(cha_list[index])
         else:
-            print cha_list[index]
+            # print cha_list[index]
             a_dict[cha_list[index]] = index
 
     for index in range(len(a_list)):
